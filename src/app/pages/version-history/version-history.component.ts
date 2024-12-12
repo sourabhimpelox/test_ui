@@ -115,7 +115,7 @@ export class VersionHistoryComponent implements OnInit {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${this.crn}-${version}.docx`;  // Download as Word file
+        a.download = `${this.crn}-${version}.docx`;
         a.click();
         window.URL.revokeObjectURL(url);
       },

@@ -8,7 +8,7 @@ export class EventsService {
 
   constructor(private http: HttpClient) {}
 
-  url = 'http://localhost:3000/api';
+  url = 'http://localhost:4000/api';
 
   getData():any {
     let users = this.http.get(`${this.url}/events`);
