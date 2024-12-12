@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<!-- <div class="container mt-4">
   <h3>Version History for {{ crn }}</h3>
 
   <table class="table table-bordered" *ngIf="versions.length > 0; else noData">
@@ -21,6 +21,41 @@
             (click)="downloadVersion(version.version)"
           >
             Download
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noData>
+    <p>No version history available for this CRN.</p>
+  </ng-template>
+</div> -->
+<!-- version-history.component.html -->
+
+<div class="container mt-4">
+  <h3>Version History for {{ crn }}</h3>
+
+  <table class="table table-bordered" *ngIf="versions.length > 0; else noData">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>CRN</th>
+        <th>Version</th>
+        <th>Operation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let version of versions">
+        <td>{{ version.id }}</td>
+        <td>{{ version.crn }}</td>
+        <td>{{ version.version }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="downloadVersion(version.version)"
+          >
+            Download Word
           </button>
         </td>
       </tr>
