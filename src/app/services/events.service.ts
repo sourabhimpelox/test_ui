@@ -16,7 +16,7 @@ export class EventsService {
     return users;
   }
 
-  getUser(id: any) {
+  getDataById(id: any) {
     return this.http.get(`${this.url}/events/${id}`);
   }
 

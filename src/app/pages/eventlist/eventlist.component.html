@@ -1,41 +1,4 @@
 <!-- 
-
-<div class="list-container">
-
-    <div>
-        <input type="text" placeholder="Search event" [(ngModel)]="searchTerm" (input)="onSearch()"
-            class="search-input" />
-    </div>
-    <div class="">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">event</th>
-                    <th scope="col">description</th>
-                  
-                    <th scope="col">Operation</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let event of filteredEvents">
-                    <td>{{ event?.id }}</td>
-                    <td>{{ event?.title }}</td>
-                    <td>{{ event?.description }}</td>
-                 
-                    <td class="button-section">
-                        <button (click)="deleteUser(event.id)" class="delete-button">Delete</button>
-                        <button [routerLink]="['/update-event', event.id]" class="update-button">Edit</button>
-                        <button (click)="generatePdf(event)" class="download-button">Download PDF</button>
-                        <button [routerLink]="['/version-history', event.title]">View Versions</button>
-                      
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-</div> -->
 <div class="list-container">
     <div>
       <input type="text" placeholder="Search event" [(ngModel)]="searchTerm" (input)="onSearch()"
@@ -60,6 +23,37 @@
             <button [routerLink]="['/update-event', event.id]" class="update-button">Edit</button>
             <button (click)="generatePdf(event)" class="download-button">Download PDF</button>
             <button [routerLink]="['/version-history', event.title]">View Versions</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+   -->
+
+   <div class="list-container">
+    <div>
+      <input type="text" placeholder="Search event" [(ngModel)]="searchTerm" (input)="onSearch()"
+          class="search-input" />
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Event</th>
+          <th scope="col">Description</th>
+          <th scope="col">Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of filteredEvents">
+          <td>{{ event?.id }}</td>
+          <td>{{ event?.title }}</td>
+          <td>{{ event?.description }}</td>
+          <td class="button-section">
+            <button (click)="deleteUser(event.id)" class="delete-button">Delete</button>
+            <button [routerLink]="['/update-event', event.id]" class="update-button">Edit</button>
+            <!-- View button -->
+            <button [routerLink]="['/event-details', event.id]" class="view-button">View</button>
           </td>
         </tr>
       </tbody>

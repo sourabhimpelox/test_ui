@@ -11,6 +11,7 @@ import { EventlistComponent } from './pages/eventlist/eventlist.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { VersionHistoryComponent } from './pages/version-history/version-history.component';
 import { RouterModule } from '@angular/router';
+import { EventDetailsComponent } from './pages/event-details/event-details.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
     UpdateeventComponent,
     EventlistComponent,
     NavbarComponent,
-    VersionHistoryComponent
+    VersionHistoryComponent,
+    EventDetailsComponent
 
   ],
   imports: [

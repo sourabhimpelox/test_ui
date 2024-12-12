@@ -4,6 +4,7 @@ import { EventlistComponent } from './pages/eventlist/eventlist.component';
 import { CreateeventComponent } from './pages/createevent/createevent.component';
 import { UpdateeventComponent } from './pages/updateevent/updateevent.component';
 import { VersionHistoryComponent } from './pages/version-history/version-history.component';
+import { EventDetailsComponent } from './pages/event-details/event-details.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'create-event', component: CreateeventComponent },
   { path: 'update-event/:id', component:UpdateeventComponent },
   { path: 'version-history/:crn', component: VersionHistoryComponent },
+  { path: 'event-details/:id', component: EventDetailsComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' }
 ];
 

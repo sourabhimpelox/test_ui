@@ -34,7 +34,7 @@ export class UpdateeventComponent implements OnInit {
 
   // Method to load the user data
   loadUserData(id: number): void {
-    this.eventService.getUser(id).subscribe((event:any) => {
+    this.eventService.getDataById(id).subscribe((event:any) => {
       this.userForm.patchValue({
         title: event.data.title,
         description: event.data.description,

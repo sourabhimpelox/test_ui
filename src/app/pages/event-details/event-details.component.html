@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <h3>Event Details</h3>
+    <div *ngIf="event">
+      <p><strong>ID:</strong> {{ event?.id }}</p>
+      <p><strong>Event:</strong> {{ event?.title }}</p>
+      <p><strong>Description:</strong> {{ event?.description }}</p>
+      <!-- Add Download PDF and View Versions buttons here -->
+      <button (click)="generatePdf(event)" class="download-button">Download PDF</button>
+      <button (click)="downloadWord()" [disabled]="!latestWordVersion">
+        Download Word
+      </button>
+  
+      <button [routerLink]="['/version-history', event?.title]" class="view-versions-button">View Versions</button>
+    </div>
+  </div>
+  
